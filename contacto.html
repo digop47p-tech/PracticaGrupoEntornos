@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+</head>
+<body>
+    <header>
+        <h1>Práctica 3 - Formulario</h1>
+    </header>
+    
+    <main>
+        <form action="/enviar" method="post">
+            <!--Recuadro con datos personales-->
+            <fieldset>
+                <legend><strong>Datos de contacto</strong></legend>
+                <label for="nombre">Nombre</label>
+                <input type="text" name="nombre" id="nombre" pattern="[A-Za-z]">
+                <label for="apellidos">Apellidos</label>
+                <input type="text" name="apellidos" id="apellidos">
+                <br><br>
+                <label for="edad">Edad</label>
+                <input type="number" name="edad" id="edad" min="1" max="99">
+                <br><br>
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" required>
+                <br><br>
+                <label for="dni">DNI (sin letra)</label>
+                <input type="text" inputmode="numeric" name="dni" id="dni" maxlength="8" pattern="[0-9]{8} required">
+                <br><br>
+                <label for="telefono">Telefono</label>
+                <input type="tel" name="telefono" id="telefono" maxlength="9" pattern="[0-9]{9}">
+            </fieldset>
+            <br>
+            <!--Recuadro con detalles-->
+            <fieldset>
+                <legend><strong>Detalles de la visita</strong></legend>
+                <label for="visita">Fecha de la visita</label>
+                <input type="date" name="fecha" id="fecha">
+                <br><br>
+                <label for="turno">Turno elegido</label><br>
+                Mañana<input type="radio" name="turno" id="mañana">
+                Tarde<input type="radio" name="turno" id="tarde">
+                <br><br>
+                <label for="visitantes">Número de visitantes</label> 
+                <input type="number" name="visitantes" id="visitantes" min="1" max="6"><br>
+                <input type="checkbox" name="visitantes" id="visita">Menor de 4 > Gratis <br>
+                <input type="checkbox" name="visitantes" id="visita">Entre 5 y 12 > 6€ <br>
+                <input type="checkbox" name="visitantes" id="visita">Entre 13 y 65 > 8€ <br>
+                <input type="checkbox" name="visitantes" id="visita">Mayor de 66 Gratis 
+                <br><br>
+                <label for="procedencia">¿Desde dónde nos visitas?</label>
+                <select name="procedencia" id="procedencia">
+                    <option value="procedencia">España</option>
+                    <option value="procedencia">Portugal</option>
+                    <option value="procedencia">Francia</option>    
+                </select>
+            </fieldset>
+            <br>
+            <fieldset>
+                 <!--Recuadro con condiciones-->
+                <legend><strong>Acepta las condiciones</strong></legend>
+                <details>
+                    <summary>Lee las condiciones a continuación</summary>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nisl tincidunt eget nullam non. Quis hendrerit dolor magna eget est lorem ipsum dolor sit. Volutpat odio facilisis mauris sit amet massa. Commodo odio aenean sed adipiscing diam donec adipiscing tristique. Mi eget mauris pharetra et. Non tellus orci ac auctor augue. Elit at imperdiet dui accumsan sit. Ornare arcu dui vivamus arcu felis. Egestas integer eget aliquet nibh praesent. In hac habitasse platea dictumst quisque sagittis purus. Pulvinar elementum integer enim neque volutpat ac.</p>
+                </details>
+                <input type="checkbox" name="terminos" id="terminos">
+            </fieldset>
+            <br>
+            <label for="comentarios"><strong>Déjanos un comentario para mejorar</strong></label><br>
+            <textarea id="comentarios" rows="6" cols="25"></textarea><br><br>
+            <button type="submit">Enviar</button><br>
+            <button type="reset">Borrar formulario</button>
+        </form>
+        <br>
+        <p>Vídeo de prueba</p>
+        <video src="audioVideo\video.mp4" poster="img/cafe.jpg" width="640" height="360" controls loop>
+            Tu navegador no admite el elemento de vídeo
+        </video>
+        <br>
+        <p>Audio de prueba</p>
+        <audio src="audioVideo/audio.m4a" controls muted>
+            Tu navegador no admite el elemento de audio
+        </audio>
+    </main>
+</body>
+<footer><strong>Dolores Aguilera Carrasco</strong></footer>
+</html>
